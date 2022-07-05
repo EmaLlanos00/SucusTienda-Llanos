@@ -1,0 +1,36 @@
+/*estilos de CARRITO*/
+#mainCarrito{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+/*estilos de SOBRE NOSOTROS*/
+#mainAboutUs{
+	width: 85%;
+	height: auto;
+	padding: 3rem;
+	margin: 1rem;
+	text-align: center;
+	background-color: #EEB8FF;
+
+}
+.cardFlex{
+	padding: 1rem;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+	justify-content: space-evenly;
+	gap: 2rem;
+}
+.card{
+	width: 20%;
+	height: auto;
+}
+.footer{
+	width: 100%;
+}

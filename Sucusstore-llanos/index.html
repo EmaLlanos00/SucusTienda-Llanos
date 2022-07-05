@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Encuentre aquí las mejores ofertas en cactus y suculentas. También ofrecemos todo tipo de insumos relativos a la jardinería de plantas crasas.">
+	<meta name="author" content="Emanuel Llanos">
 	<title>Sucusstore - tienda de suculentas y más</title>
 	<link rel="shortcut icon" href="img/favicon.png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -50,8 +52,8 @@
 				  <li class="nav-item"><a class="nav-link" href="./pages/carrito.html"><img src="img/cart.png" alt="icono carrito de compras"></a></li>
 				</ul>
 				<form class="d-flex" role="search">
-				  <input id="formFix" class="form-control me-2" type="search" placeholder="Buscá algo..." aria-label="Search">
-				  <button id="formFix"class="btn btn-outline-success" type="submit">Buscar</button>
+				  <input class="form-control me-2 formFix" type="search" placeholder="Buscá algo..." aria-label="Search">
+				  <button class="btn btn-outline-success formFix" type="submit">Buscar</button>
 				</form>
 			  </div>
 			  
@@ -59,7 +61,7 @@
 		  </nav>
 	<div id="bodyIndex">
 		<div class="itemsSignStyle sign"> 
-			<h1 class="textCenter">Envíos gratis en compras superiores a 4000!!!</h1>
+			<h1 class="text-center">Envíos gratis en compras superiores a 4000!!!</h1>
 		</div>
 		<!--finaliza nav y cartel procional-->
 		<!-- inicia slider de fotos-->
@@ -151,32 +153,37 @@
 			
 		<!-- finaliza galería-->
 		<!--inicia formulario-->
-		<section class="textCenter bodyPageFont contactFormStyle objCentred container-fluid" id="contacto">
+		<section class="text-center bodyPageFont contactFormStyle objCentred container-fluid" id="contacto">
 			<article>
 				<form action="envio.php" method="post" id=formulario>
 						<fieldset>
 								<legend class="textCenter itemsTitleStyle">Contactanos!</legend>
-								<label for="mail">Correo</label> <br>
-								<input type="email" name=mail id="mail" placeholder="alguien@ejemplo.es"> <br><br>
-								<label for="newsletter">¿Le gustaría recibir las últimas novedades en su correo?</label> 
-								<input type="checkbox" name="newsletter" id="newsletter"> <br><br>
-								<label for="asunto">Por favor, indique el asunto de su consulta</label>
-								<select name="asunto" id="asunto"> 
-									<option value="compras">Compras</option>
-									<option value="envios">Envíos</option>
-									<option value="otro">Otro</option>
-								</select><br><br>
-
-								<label for="mensaje">Mensaje</label> <br>
-								<textarea id="mensaje" cols=50 rows=10></textarea> <br>
-								<input type="submit" value=Enviar>
-								<input type="reset" value=Cancelar>
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+									<label for="email">Correo</label>
+								  </div><br>
+								  <div class="form-check">
+									<label class="form-check-label" for="newsletter">
+										¿Le gustaría recibir las últimas novedades en su correo?
+									</label>
+									<input class="form-check-input" type="checkbox" value="" id="newsletter" checked>
+								  </div> <br>
+								<select class="form-select" aria-label="Default select example">
+									<option selected>Por favor, indique el asunto de su consulta</option>
+									<option value="1">Compras</option>
+									<option value="2">Envíos</option>
+									<option value="3">Otros</option>
+								</select><br>
+								<div class="form-floating">
+									<textarea class="form-control" placeholder="Leave a comment here" id="mensajeIndex" style="height: 20rem"></textarea>
+									<label for="mensajeIndex">Mensaje</label>
+								  </div>
 						</fieldset>
 				</form> 
 			</article>
 		</section>
 		<!--finaliza formulario, inicia footer-->
-		<footer class="footer">
+		<footer>
 			<h3 class= "itemsTitleStyle">Seguinos en nuestras redes sociales!!!</h3>
 			<section>
 					<a href="https://www.instagram.com" target="blank"><img src="img/instagram-logo-32.png" alt="instagram icon"></a>  

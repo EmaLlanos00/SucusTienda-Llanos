@@ -1,0 +1,16 @@
+
+//------------estilos y layout para FOOTER--------//
+footer {
+    width: auto;
+    height: 180px;
+    @include flex(column, wrap, center, flex-start);
+    background-color: map-get($map: $colors, $key: color6);
+    grid-column: 1 / span 3;
+  
+    section {
+      display: flex;
+      align-items: center;
+      margin-top: 3rem;
+    }
+  }
+  
