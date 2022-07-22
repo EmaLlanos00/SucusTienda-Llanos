@@ -1,0 +1,78 @@
+/*estilos de CARRITO*/
+#mainCarrito{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	.cartelFondo{
+		width: auto;
+		height: 50vh;
+		background-image: url(../img/plants/cactus-1.webp);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		.cartelCarro{
+			@extend .itemsTitleStyle;
+			background-color: rgba(202, 202, 202, 0.4) !important;
+			width: 50% !important;
+			height: auto;
+			padding: 2rem;
+			border-radius: 0.5em;
+			color: map-get($map: $colors, $key: color9);
+			@media (max-width: 1000px) {
+				width: 80% !important;
+			}
+	
+		}
+	}
+}
+/*estilos de BLOG*/
+#mainAboutUs{
+	h2 {
+		overflow: hidden;
+		text-align: center;
+	  
+	  
+	  &:before,
+	  &:after {
+		background-color: #000;
+		content: "";
+		display: inline-block;
+		height: 1px;
+		position: relative;
+		vertical-align: middle;
+		width: 50%;
+	  }
+	  
+	  &:before {
+		right: 0.5em;
+		margin-left: -50%;
+	  }
+	  
+	  &:after {
+		left: 0.5em;
+		margin-right: -50%;
+	  }
+	}
+}
+.longCards1{
+	width: 100%;
+	height: auto;
+	@media (min-width: 768px){
+	.col-md-4 {
+    flex: 0 0 auto;
+    width: 20%;
+			}
+		}
+	.row{
+		@include flex(row, wrap, flex-start, flex-start)
+	}
+}
+.longCards2{
+	@extend .longCards1;
+	.row{
+		justify-content: space-between;
+	}
+}

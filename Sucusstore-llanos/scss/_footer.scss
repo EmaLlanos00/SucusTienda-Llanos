@@ -1,7 +1,7 @@
 
-//------------estilos y layout para FOOTER--------//
+/*------------estilos y layout para FOOTER--------*/
 footer {
-    width: auto;
+    width: 100%;
     height: 180px;
     @include flex(column, wrap, center, flex-start);
     background-color: map-get($map: $colors, $key: color6);
@@ -14,7 +14,7 @@ footer {
     }
   }
   .coolerFooter{
-    width: auto;
+    width: 100vw;
     height: auto;
     padding: 0 10rem;
       @include flex(row, wrap, flex-start, space-around);
@@ -25,13 +25,20 @@ footer {
       }
       div{
         margin-bottom: 2rem;
+        @include flex(column, wrap, center, center);
         ul{
           list-style: none;
+          
           li{
             font-size: 1.5rem;
             font-family: $fuenteTres;
             line-height: 2.3em;
           }
+        }
+        p{
+          width: fit-content;
+          font-size: 1.5rem;
+          font-family: $fuenteTres;
         }
       }
       
@@ -67,14 +74,22 @@ footer {
           div{
             div{
               ul{
+                width: 90vw;
                 li{
-                font-size: 2.5rem;
+                font-size: 2.2rem;
                 }
-            }
+              }
+              p{
+                padding: 0 8px;
+                width: 95vw;
+                font-size: 2.2rem;
+                span{
+                  word-wrap: break-word;
+
+                }
+              }
+             
           }
         }
       }
-  }
-  #fixFooter{
-    width: 100%;
   }

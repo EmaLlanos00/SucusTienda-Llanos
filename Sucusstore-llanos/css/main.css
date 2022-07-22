@@ -1,16 +1,202 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@600&family=Zen+Maru+Gothic&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: scrollbar; }
+
+form, ul li {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 2rem; }
+
+ul li a {
+  text-decoration: none;
+  color: #000000; }
+
+.btn-primary {
+  background-color: #CACACA;
+  border-color: #CACACA;
+  --bs-btn-hover-bg: none;
+  --bs-btn-focus-shadow-rgb: none;
+  --bs-btn-active-shadow: none; }
+
+.btn:hover {
+  background-color: #A9A7B0;
+  border-color: #BFBFBF; }
+
+.carousel-caption {
+  right: 30%;
+  left: 30%; }
+  @media (max-width: 1200px) {
+    .carousel-caption {
+      right: 21%;
+      left: 21%; } }
+
+.form-control {
+  font-size: 1.8rem; }
+  .form-control:hover {
+    border-color: #A9A7B0; }
+
+.form-select {
+  font-size: 1.8rem;
+  width: 90%; }
+
+.form-floating > .form-control {
+  height: 7rem; }
+  .form-floating > .form-control:not(:placeholder-shown) {
+    padding-top: 2.2rem;
+    padding-bottom: .625rem; }
+
+/*Estilización del Nav*/
+.nav {
+  background-color: #ABFFD1; }
+
+/*estilo carrito icon*/
+.littleCart {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: url(../img/cart2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%; }
+
+.formFix {
+  font-size: 1.5rem; }
+
+/*estilo de imágenes*/
+.productGalery {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 100%;
+  height: auto; }
+  .productGalery img {
+    width: 30%;
+    height: auto;
+    border: 2px solid #EEB8FF;
+    object-fit: cover; }
+
+.myCards {
+  width: 25rem; }
+  @media (max-width: 1100px) {
+    .myCards {
+      width: 35rem; } }
+  @media (max-width: 700px) {
+    .myCards {
+      width: unset; } }
+
+/*texto para cuerpo*/
+.bodyPageFont {
+  font-size: 2rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  padding: 1rem; }
+
+/*estilo de titulos*/
+.itemsSignStyle, .itemsTitleStyle, #mainCarrito .cartelFondo .cartelCarro {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  font-size: 2.5rem;
+  background-color: #c4fa7f; }
+
+.itemsTitleStyle, #mainCarrito .cartelFondo .cartelCarro {
+  background-color: #CACACA;
+  text-align: center; }
+
+/*estilos de asides*/
+.asideStyles {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.5rem;
+  border-radius: 3px; }
+
+.flexAsideFotos {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between; }
+
+/*estilo para formularios*/
+.contactFormStyle {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: auto; }
+
+/*centrado de fotos*/
+.galleryStyle1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #c8bfe7; }
+
+/*centrar objeto*/
+.objCentred {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto; }
+
+/* estilos de SCROLL para motores Webkit y blink (Chrome, Safari, Opera... )*/
+body::-webkit-scrollbar {
+  -webkit-appearance: none; }
+
+body::-webkit-scrollbar:vertical {
+  width: 10px; }
+
+body::-webkit-scrollbar-button:increment,
+body::-webkit-scrollbar-button {
+  display: none; }
+
+body::-webkit-scrollbar:horizontal {
+  height: 10px; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3; }
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px; }
+
+body {
+  /*Estilos estándar experimentales (Firefox)*/
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0);
+  scrollbar-width: thin; }
+
 /*-----------------GRID DE INDEX----------------------*/
 #bodyIndex {
   display: grid;
   overflow-x: hidden;
   grid-template-areas: "sign 		sign 		sign" "header 	header 		header" "macetas 	destacados 	plantas" "macetas 	contact 	plantas";
   min-height: 100vh;
-  grid-template-rows: 3rem 0.5fr 1fr 1fr;
+  grid-template-rows: auto 0.5fr 1fr 1fr;
   grid-template-columns: 1fr 3fr 1fr; }
 
 .sign {
-  grid-area: sign; }
+  grid-area: sign;
+  grid-column: 1 / span 3; }
 
 .header {
   width: 99%;
@@ -28,16 +214,124 @@
     object-fit: cover; }
 
 #destacados {
-  grid-area: destacados;
-  display: flex;
-  justify-content: flex-start;
-  flex-flow: column nowrap;
-  background-color: #d3d3d3; }
-  #destacados img {
-    margin: 1rem; }
-  #destacados h3 {
-    width: 25%;
-    height: auto; }
+  grid-area: destacados; }
+  #destacados #indexFotos {
+    display: grid;
+    grid-template-areas: "h1Fotos h1Fotos h1Fotos" "foto1  foto2 foto3" "foto4 foto5 foto5";
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(3, 1fr); }
+    #destacados #indexFotos img {
+      width: 100%; }
+    #destacados #indexFotos #h1Fotos {
+      grid-area: h1Fotos;
+      grid-column: 1 / 4; }
+  #destacados .fotoss1 {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    grid-area: foto1; }
+    #destacados .fotoss1::before {
+      content: "Kalanchoe Luciae";
+      font-size: 2rem;
+      color: #ffffff;
+      height: 2.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #808080;
+      opacity: 0.8;
+      transform: scaleY(0);
+      transition: transform .2s; }
+    #destacados .fotoss1:hover::before {
+      transform: scaleY(1); }
+  #destacados .fotoss2 {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    grid-area: foto2; }
+    #destacados .fotoss2::before {
+      content: "Echeveria Lola";
+      font-size: 2rem;
+      color: #ffffff;
+      height: 2.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #808080;
+      opacity: 0.8;
+      transform: scaleY(0);
+      transition: transform .2s; }
+    #destacados .fotoss2:hover::before {
+      transform: scaleY(1); }
+  #destacados .fotoss3 {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    grid-area: foto3; }
+    #destacados .fotoss3::before {
+      content: "Haworthia Truncata";
+      font-size: 2rem;
+      color: #ffffff;
+      height: 2.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #808080;
+      opacity: 0.8;
+      transform: scaleY(0);
+      transition: transform .2s; }
+    #destacados .fotoss3:hover::before {
+      transform: scaleY(1); }
+  #destacados .fotoss4 {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    grid-area: foto4; }
+    #destacados .fotoss4::before {
+      content: "Senecio Kleiniformis";
+      font-size: 2rem;
+      color: #ffffff;
+      height: 2.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #808080;
+      opacity: 0.8;
+      transform: scaleY(0);
+      transition: transform .2s; }
+    #destacados .fotoss4:hover::before {
+      transform: scaleY(1); }
+  #destacados .fotoss5 {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    grid-area: foto5; }
+    #destacados .fotoss5::before {
+      content: "Echeveria Pinky Trumpet";
+      font-size: 2rem;
+      color: #ffffff;
+      height: 2.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #808080;
+      opacity: 0.8;
+      transform: scaleY(0);
+      transition: transform .2s; }
+    #destacados .fotoss5:hover::before {
+      transform: scaleY(1); }
 
 #nuevasPlantas {
   grid-area: plantas; }
@@ -48,9 +342,11 @@
 #contacto {
   grid-area: contact;
   width: 100%; }
+  #contacto article form fieldset, #contacto article ul li fieldset, ul #contacto article li fieldset {
+    padding: 1rem; }
 
 /*medium size*/
-@media (max-width: 999px) {
+@media (max-width: 1200px) {
   #bodyIndex {
     grid-template-areas: "sign sign" "header header" "destacados destacados" "plantas macetas" "contact contact";
     min-height: 100vh;
@@ -62,23 +358,38 @@
     margin: 1rem;
     font-size: 2rem; }
   #contacto {
+    width: auto;
     border: 3px solid #808080;
     border-radius: 3px;
     background-color: white;
     margin: 1rem; } }
+
+/*destacados md size*/
+@media (max-width: 1000px) {
+  #destacados #indexFotos {
+    grid-template-areas: "h1Fotos h1fotos" "foto1 foto2" "foto3 foto4" "foto5 foto5";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 50%;
+    gap: 0.35rem; } }
 
 /*small size*/
 @media (max-width: 600px) {
   #bodyIndex {
     grid-template-areas: "sign " "header" "destacados" "plantas" "macetas" "contact";
     min-height: 100vh;
-    grid-template-rows: 5vh auto 0.5fr 1fr auto auto;
+    grid-template-rows: 45px auto 0.5fr auto auto auto;
     grid-template-columns: 100vw; }
   #destacados {
-    border: 3px solid gray;
+    border: 1px solid gray;
     border-radius: 3px;
     margin: 1rem;
     font-size: 2rem; }
+    #destacados #indexFotos {
+      grid-template-areas: "h1Fotos" "foto1" "foto2" "foto5" "foto3" "foto4";
+      grid-template-rows: auto auto auto auto auto auto;
+      grid-template-columns: 1fr;
+      gap: unset;
+      row-gap: 1rem; }
   #contacto {
     padding: 0;
     border: 3px solid gray;
@@ -86,30 +397,25 @@
     background-color: white;
     margin: 1rem; } }
 
-/*-------clases de BS pisadas------*/
-.form-control {
-  font-size: 1.8rem; }
-
-.form-select {
-  font-size: 1.8rem; }
-
-.form-floating > .form-control {
-  height: 7rem; }
-  .form-floating > .form-control:not(:placeholder-shown) {
-    padding-top: 2.2rem;
-    padding-bottom: .625rem; }
-
 /*ESTILOS DE PRODUCTOS*/
 #bodyProductos {
   display: grid;
   overflow-x: hidden;
-  grid-template-areas: "sign 		sign 		sign" "menu 		cactus 		otros" "menu 		sucus 		otros" "menu 		pots 		otros" "pie 		pie 		pie";
-  gap: 1rem;
+  grid-template-areas: "sign sign sign" "menu cactus otros" "menu sucus otros" "menu pots otros" "pie pie pie";
   min-height: 100vh;
   grid-template-rows: 3rem 1fr 1fr 0.5fr auto;
   grid-template-columns: 1fr 3fr 1fr; }
   #bodyProductos #menuProductos {
-    grid-area: menu; }
+    grid-area: menu;
+    width: 100%; }
+    #bodyProductos #menuProductos .accordion {
+      width: 100%;
+      --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgb(128, 128, 128, 0.4); }
+    #bodyProductos #menuProductos .accordion-button {
+      font-size: 2rem; }
+    #bodyProductos #menuProductos .accordion-button:not(.collapsed) {
+      color: #808080;
+      background-color: #ABFFD1; }
     #bodyProductos #menuProductos ul {
       width: 100%;
       height: auto;
@@ -131,12 +437,19 @@
   #bodyProductos #macetas {
     grid-area: pots; }
   #bodyProductos #otros {
-    grid-area: otros; }
+    grid-row-start: otros;
+    grid-column-start: otros;
+    grid-row-end: otros;
+    grid-column-end: otros; }
+    @media (max-width: 650px) {
+      #bodyProductos #otros {
+        grid-column-start: 1;
+        grid-column-end: span 3; } }
 
 /*PRODUCTOS MD SIZE*/
-@media (max-width: 999px) {
+@media (max-width: 1160px) {
   #bodyProductos {
-    grid-template-areas: "sign 		sign" "menu 		cactus" "menu 		sucus" "menu 		pots" "menu       otros" "pie 		pie";
+    grid-template-areas: "sign sign" "menu cactus" "menu sucus" "menu pots" "menu otros" "pie pie";
     min-height: 100vh;
     grid-template-rows: 3rem auto auto auto auto auto;
     grid-template-columns: 1fr 3fr; }
@@ -150,40 +463,29 @@
     height: auto;
     border: 2px solid #EEB8FF;
     object-fit: cover; }
-  #cactus, #sucus, #macetas {
+  #cactus,
+  #sucus,
+  #macetas {
     border: 3px solid gray;
     border-radius: 3px;
     margin: 1rem;
     font-size: 2rem; } }
 
 /*PRODUCTOS SM SIZE*/
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #bodyProductos {
-    grid-template-areas: "sign" "cactus" "sucus" "pots" "otros" "pie";
+    grid-template-areas: "sign" "cactus" "sucus" "pots" "otros" "pie";
     min-height: 100vh;
-    grid-template-rows: 5rem auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-columns: 1fr; }
-  #menuProductos {
-    display: none; }
-  /*#otros .flexAsideFotos{
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: center;
-		}
+  #otros {
+    grid-column-start: 1;
+    grid-column-end: span 3; } }
 
-		#otros img{
-			width: 30%;
-			height: auto;
-			border: 2px solid #EEB8FF;
-			object-fit: cover;
-		}
-	#cactus, #sucus, #macetas{
-		border: 3px solid gray;
-		border-radius: 3px;
-		margin: 1rem;
-		font-size: 2rem;
-	}*/ }
+.fixedButton {
+  position: fixed;
+  top: 16rem;
+  left: 0rem; }
 
 /*estilos de CARRITO*/
 #mainCarrito {
@@ -193,38 +495,65 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center; }
+  #mainCarrito .cartelFondo {
+    width: auto;
+    height: 50vh;
+    background-image: url(../img/plants/cactus-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    #mainCarrito .cartelFondo .cartelCarro {
+      background-color: rgba(202, 202, 202, 0.4) !important;
+      width: 50% !important;
+      height: auto;
+      padding: 2rem;
+      border-radius: 0.5em;
+      color: #ffffff; }
+      @media (max-width: 1000px) {
+        #mainCarrito .cartelFondo .cartelCarro {
+          width: 80% !important; } }
 
-/*estilos de SOBRE NOSOTROS*/
-#mainAboutUs {
-  width: 85%;
-  height: auto;
-  padding: 3rem;
-  margin: 1rem;
-  text-align: center;
-  background-color: #EEB8FF; }
+/*estilos de BLOG*/
+#mainAboutUs h2 {
+  overflow: hidden;
+  text-align: center; }
+  #mainAboutUs h2:before, #mainAboutUs h2:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%; }
+  #mainAboutUs h2:before {
+    right: 0.5em;
+    margin-left: -50%; }
+  #mainAboutUs h2:after {
+    left: 0.5em;
+    margin-right: -50%; }
 
-.cardFlex {
-  padding: 1rem;
+.longCards1, .longCards2 {
   width: 100%;
-  height: auto;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: space-evenly;
-  gap: 2rem; }
-
-.card {
-  width: 20%;
   height: auto; }
+  @media (min-width: 768px) {
+    .longCards1 .col-md-4, .longCards2 .col-md-4 {
+      flex: 0 0 auto;
+      width: 20%; } }
+  .longCards1 .row, .longCards2 .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start; }
 
-.footer {
-  width: 100%; }
+.longCards2 .row {
+  justify-content: space-between; }
 
 /*estilos de CUENTA*/
 #accountBody {
   display: grid;
   overflow-x: hidden;
-  grid-template-areas: "slider 		slider" "signA 			signA" "form1 			form2" "pie 			pie";
+  grid-template-areas: "slider slider" "signA 	signA" "form1 	form2" "pie 	pie";
   min-height: 100vh;
   grid-template-rows: auto auto 330px auto;
   grid-template-columns: 50vw 50vw; }
@@ -241,7 +570,8 @@
     font-size: 1.5rem;
     width: 92%; }
 
-#form1 input, select {
+#form1 input,
+select {
   margin: 1rem; }
 
 #form2 {
@@ -252,26 +582,16 @@
   font-size: 1.5rem;
   width: 95%; }
 
-.btn-primary {
-  background-color: #CACACA;
-  border-color: #CACACA; }
-
-.btn:hover {
-  background-color: #A9A7B0;
-  border-color: #BFBFBF; }
-
-.form-control:hover {
-  border-color: #A9A7B0; }
-
 /*CUENTA MD SIZE*/
 @media (max-width: 800px) {
   #accountBody {
-    grid-template-areas: "slider" "signA" "form1" "form2" "pie";
+    grid-template-areas: "slider" "signA" "form1" "form2" "pie";
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 100Vw; } }
 
+/*------------estilos y layout para FOOTER--------*/
 footer {
-  width: auto;
+  width: 100%;
   height: 180px;
   display: flex;
   flex-direction: column;
@@ -286,7 +606,7 @@ footer {
     margin-top: 3rem; }
 
 .coolerFooter {
-  width: auto;
+  width: 100vw;
   height: auto;
   padding: 0 10rem;
   display: flex;
@@ -298,13 +618,22 @@ footer {
     margin-bottom: 0.8em;
     text-decoration: underline 3px #808080; }
   .coolerFooter div {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
     .coolerFooter div ul {
       list-style: none; }
       .coolerFooter div ul li {
         font-size: 1.5rem;
         font-family: "Nunito", sans-serif;
         line-height: 2.3em; }
+    .coolerFooter div p {
+      width: fit-content;
+      font-size: 1.5rem;
+      font-family: "Nunito", sans-serif; }
   .coolerFooter .conLogos {
     width: 1fr;
     height: auto;
@@ -332,173 +661,13 @@ footer {
       justify-content: space-around; }
       .coolerFooter h3 {
         font-size: 2.5rem; }
-      .coolerFooter div div ul li {
-        font-size: 2.5rem; } }
-
-#fixFooter {
-  width: 100%; }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  background-color: #f5f5f5; }
-
-/*Estilización del Nav*/
-.nav {
-  background-color: #ABFFD1; }
-  .nav ul li {
-    font-family: "Zen Maru Gothic", sans-serif;
-    font-size: 2rem; }
-  .nav form {
-    font-family: "Zen Maru Gothic", sans-serif;
-    font-size: 2rem; }
-
-/*estilo carrito icon*/
-.littleCart {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  background-image: url(../img/cart2.png);
-  /*var(--bs-navbar-toggler-icon-bg)*/
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%; }
-
-.formFix {
-  font-size: 1.5rem; }
-
-/*estilo de imágenes*/
-.foto {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  width: 30%;
-  height: auto; }
-  .foto img {
-    width: 90%;
-    height: auto;
-    border: 2px solid #EEB8FF;
-    object-fit: cover; }
-
-.productGalery {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  width: 100%;
-  height: auto; }
-  .productGalery img {
-    width: 30%;
-    height: auto;
-    border: 2px solid #EEB8FF;
-    object-fit: cover; }
-
-/*texto para cuerpo*/
-.bodyPageFont {
-  font-size: 2rem;
-  font-family: "Zen Maru Gothic", sans-serif;
-  padding: 1rem; }
-
-/*texto de subtitulo*/
-.subtitleFont {
-  text-decoration: underline;
-  font-size: 1.9rem;
-  font-family: "Nunito", sans-serif;
-  text-align: center; }
-
-/*estilo de cartel*/
-.itemsSignStyle, .itemsTitleStyle {
-  font-family: "Nunito", sans-serif;
-  width: 100%;
-  font-size: 2.5rem;
-  background-color: #c4fa7f; }
-
-/*estilo de titulos*/
-.itemsTitleStyle {
-  background-color: #CACACA;
-  text-align: center; }
-
-/*estilo de cartel 2*/
-/*.itemsSignScnd {
-  font-family: $fuenteTres;
-  width: 50%;
-  font-size: 1.6rem;
-  background-color: map-get($colors, color4);
-  margin: 4rem 14rem;
-  height: auto;
-  text-align: center;
-}*/
-/*estilo de asides*/
-.asideStyles {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 1rem;
-  border: 2px solid #808080;
-  border-radius: 3px;
-  /*background-color: rgb(200, 191, 231);*/ }
-
-.flexAsideFotos {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between; }
-
-/*estilo de fotos aside*/
-.fotoAsides {
-  width: 80%;
-  height: auto;
-  border: 2px solid #EEB8FF; }
-
-/*estilo para formularios*/
-.contactFormStyle {
-  background-color: #c8bfe7;
-  width: 100%;
-  height: auto; }
-
-/*hidden resources*/
-.hiddenObject {
-  display: none; }
-
-/*centrado de fotos*/
-.galleryStyle1 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #c8bfe7; }
-
-/*centrar objeto*/
-.objCentred {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  margin: 0 auto; }
-
-/*márgenes*/
-.margin1 {
-  margin: 1rem; }
-
-.margin2 {
-  margin: 3rem; }
-
-.bgColour1 {
-  background-color: #c8bfe7; }
-
-.bgColour2 {
-  background-color: #CACACA; }
+      .coolerFooter div div ul {
+        width: 90vw; }
+        .coolerFooter div div ul li {
+          font-size: 2.2rem; }
+      .coolerFooter div div p {
+        padding: 0 8px;
+        width: 95vw;
+        font-size: 2.2rem; }
+        .coolerFooter div div p span {
+          word-wrap: break-word; } }
