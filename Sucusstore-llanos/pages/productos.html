@@ -14,7 +14,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg nav sticky-top">
 		<div class="container-fluid">
-		<a class="navbar-brand" href="../index.html"><img src="../img/logo p1.png" alt="logo succus store"></a>
+		<a class="navbar-brand" href="../index.html"><img class="w-100" src="../img/logo-ss.webp" alt="logo succus store"></a>
 		<div>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -33,10 +33,10 @@
 				Productos
 				</a>
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<li><a class="dropdown-item" href="productos.html">Suculentas</a></li>
-				<li><a class="dropdown-item" href="productos.html">Cactus</a></li>
-				<li><a class="dropdown-item" href="productos.html">Macetas</a></li>
-				<li><a class="dropdown-item" href="productos.html">Otros</a></li>
+					<li><a class="dropdown-item" href="productos.html">Cactus</a></li>
+					<li><a class="dropdown-item" href="productos.html">Suculentas</a></li>
+					<li><a class="dropdown-item" href="productos.html">Macetas</a></li>
+					<li><a class="dropdown-item" href="productos.html">Otros</a></li>
 				</ul>
 			</li>
 			<li class="nav-item hover-underline-animation">
@@ -67,7 +67,7 @@
 				data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"><img
 					src="../img/burguer-button-24.svg" alt="boton hamburguesa"></button>
 		
-			<div class="alert alert-light d-none d-md-block formFix fs-2 text-center">Categorías</div>
+			<div class="alert alert-light d-none d-md-block formFix fs-2 text-center itemsTitleStyle rounded-pill">Categorías</div>
 		
 			<div class="offcanvas-md offcanvas-start" tabindex="-1" id="offcanvasResponsive"
 				aria-labelledby="offcanvasResponsiveLabel">
@@ -156,7 +156,7 @@
 										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
 											data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
 											aria-controls="panelsStayOpen-collapseFour">
-											OTROS
+											INSUMOS
 										</button>
 									</h2>
 									<div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
@@ -178,53 +178,215 @@
 			</div>
 		</div>
 		<!----------------------------------------inicia secciones de productos----------->
-
-			<section id="cactus" class=" productGalery"> 
-				     <h2 class="itemsTitleStyle">Cactus</h2>
-				     <div>
-				     	<img src="../img/plants/Astrophytum-asterias.jpg" alt="cactus astrophytum asterias">
-				     	<img src="../img/plants/gymnocalycium-erinaceum.jpg" alt="cactus gymnolacalucium erinaceum">
-				     	<img src="../img/plants/mammillaria-pectinifera.jpg" alt="cactus mammillaria pectinifera">
-				     	<img src="../img/plants/Notocactus-submammulosa.jpg" alt="cactus notocactus submammulosa">
-				     	<img src="../img/plants/astrophytum-myriostigma.webp" alt="cactus astrophytum-myriostigma">
-				     	<img src="../img/plants/ferocactus-latispinus.jpg" alt="cactus ferocactus latispinus">
-				     </div>
+			<section id="cactus" class="border border-2 border-end-0 border-top-0 mb-4">
+				<h2 class="itemsTitleStyle rounded-5 mt-4">Cactus</h2>
+				<div class="productGalery">
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/Astrophytum-asterias.jpg" alt="cactus astrophytum asterias">
+						</div>
+						<div class="contentCard">
+							<h3>Astrophytum asterias</h3>
+							<p>Disponible en maceta n10. $1150.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/gymnocalycium-erinaceum.jpg" alt="cactus gymnolacalucium erinaceum">
+						</div>
+						<div class="contentCard">
+							<h3>Gymnocalycium erinaceum</h3>
+							<p>En maceta cuadrada a $450!</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/mammillaria-pectinifera.jpg" alt="cactus mammillaria pectinifera">
+						</div>
+						<div class="contentCard">
+							<h3>Mammillaria pectinifera</h3>
+							<p>Ejemplar de colección a $2800 en maceta n8.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/Notocactus-submammulosa.jpg" alt="cactus notocactus submammulosa">
+						</div>
+						<div class="contentCard">
+							<h3>Notocactus submammulosa</h3>
+							<p>En oferta a $400, 2x700.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/astrophytum-myriostigma.webp" alt="cactus astrophytum-myriostigma">
+						</div>
+						<div class="contentCard">
+							<h3>Astrophytum myriostigma</h3>
+							<p>En macetas n6 a $300.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/ferocactus-latispinus.jpg" alt="cactus ferocactus latispinus">
+						</div>
+						<div class="contentCard">
+							<h3>Ferocactus latispinus</h3>
+							<p>Pequeños cactus a $270 c/u.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+				</div>
 			</section>
-			<section id="sucus" class=" productGalery">
-				     <h2 class="itemsTitleStyle">Suculentas</h2>
-				     <div>
-			         	<img src="../img/plants/plantas 3.webp" alt="kalanchoe pink butterfly">
-			         	<img src="../img/plants/echeveria-red-wine.webp" alt="echeveria red wine">
-			         	<img src="../img/plants/haworthia-attenuata-var.webp" alt="haworthia attenuata variegata">
-			         	<img src="../img/plants/titanopsis-calcarea.webp" alt="titanopsis calcarea planta">
-			         	<img src="../img/plants/Haworthia-Marumiana-var-Batesiana.webp" alt="haworthia marumiana batesiana">
-			         	<img src="../img/plants/graptopetalum-superbum.webp" alt="graptopetalum superbum">	
-			         </div>			
-	        </section>
-				
-			<section id="macetas" class=" productGalery">
-			         <h2 class="itemsTitleStyle">Macetas</h2>
-			         <div>
-			         	<img src="../img/miscellaneous/macetitas.jfif" alt="macetas plasticas con dibujos">
-			         	<img src="../img/miscellaneous/macetas-cuadradas.jpeg" alt="macetas cuadradas de colores">
-			         	<img src="../img/miscellaneous/maceta-bol-n35.jpg" alt="macetas plásticas grandes tipo bol">
-			         	<img src="../img/miscellaneous/macetas-facetadas.jfif" alt="macetas facetadas de colores">
-			         	<img src="../img/miscellaneous/maceta-plástica-n10.jpg" alt="macetas plásticas redondas de colores">
-			         </div>
+			<section id="sucus" class="border border-2 border-end-0 border-top-0 mb-4">
+				<h2 class="itemsTitleStyle rounded-5 mt-4">Suculentas</h2>
+				<div class="productGalery">
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/plantas 3.webp" alt="kalanchoe pink butterfly">
+						</div>
+						<div class="contentCard">
+							<h3>Kalanchoe "pink butterfly"</h3>
+							<p>Enormes a $400.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/graptopetalum-superbum.webp" alt="cactus ferocactus latispinus">
+						</div>
+						<div class="contentCard">
+							<h3>Graptopetalum superbum</h3>
+							<p>Único en maceta N16. $700.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/haworthia-attenuata-var.webp" alt="haworthia attenuata variegata">
+						</div>
+						<div class="contentCard">
+							<h3>haworthia attenuata variegata</h3>
+							<p>Ejemplar de lujo a $3900.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/titanopsis-calcarea.webp" alt="titanopsis calcarea planta">
+						</div>
+						<div class="contentCard">
+							<h3>Titanopsis calcarea</h3>
+							<p>En maceta número 8 a $400.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/Haworthia-Marumiana-var-Batesiana.webp" alt="haworthia marumiana batesiana">
+						</div>
+						<div class="contentCard">
+							<h3>Haworthia marumiana</h3>
+							<p>Con hijitos, a solo $300.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/plants/echeveria-red-wine.webp" alt="echeveria red wine">
+						</div>
+						<div class="contentCard">
+							<h3>Echeveria red wine</h3>
+							<p>A $500 c/u.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="macetas" class="border border-1 border-end-0 border-top-0 mb-4">
+				<h2 class="itemsTitleStyle rounded-5 mt-4">Macetas</h2>
+				<div class="productGalery">
+					<div class="shopCards">
+						<div>
+							<img src="../img/miscellaneous/macetitas.webp" alt="macetas plasticas con dibujos">
+						</div>
+						<div class="contentCard">
+							<h3>Macetas decoradas</h3>
+							<p>De plástico con frases surtidas. $90 c/u.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/miscellaneous/maceta-ceramica-buho.webp" alt="maceta de ceramica con forma de buho color verde oscuro">
+						</div>
+						<div class="contentCard">
+							<h3>Maceta búho</h3>
+							<p>De cerámica, hecha a mano. $1500.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/miscellaneous/macetas-facetadas.webp" alt="macetas facetadas de colores">
+						</div>
+						<div class="contentCard">
+							<h3>Macetas facetadas</h3>
+							<p>Colores varios, diámetro 10cm. $60 c/u.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/miscellaneous/maceta-plastica-n10.webp" alt="macetas plásticas numero 10 de colores surtidos">
+						</div>
+						<div class="contentCard">
+							<h3>Macetas plástica n10</h3>
+							<p>Colores surtidos, $50 c/u.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/miscellaneous/macetas-barro-cilindro.webp" alt="3 macetas de barro de forma cilindrica">
+						</div>
+						<div class="contentCard">
+							<h3>Cilíndricas de barro.</h3>
+							<p>Varios tamaños. Consultar</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+					<div class="shopCards">
+						<div>
+							<img src="../img/miscellaneous/maceta-ceramica-2.webp" alt="maceta ceramica bol de rayas blancas y azul">
+						</div>
+						<div class="contentCard">
+							<h3>Cerámica bol</h3>
+							<p>En azul y rojo, $1300.</p>
+							<a href="#">Comprar</a>
+						</div>
+					</div>
+				</div>
 			</section>
 				
-			<section id="otros" class="asideStyles">
-			         <h2 class="itemsTitleStyle">Otros</h2>
+			<section id="otros" class="asideStyles border border-2 border-end-0 border-top-0">
+			         <h2 class="itemsTitleStyle rounded-5 mt-3">Insumos</h2>
 			         <div class="flexAsideFotos">
-			         	<img class="w-75 rounded border border-secundary border-2" src="../img/miscellaneous/piedritas.webp" alt="piedras naturales decorativas">
-			         	<img class="w-75 rounded border border-secundary border-2" src="../img/miscellaneous/puzolana-roja.webp" alt="piedra roja volcánica jardín">
-			         	<img class="w-75 rounded border border-secundary border-2" src="../img/miscellaneous/sustrato-plantas.webp" alt="sustrato para cacuts y suculentas">
-			         	<img class="w-75 rounded border border-secundary border-2" src="../img/miscellaneous/tela-antihelada.png" alt="tela antihelada para plantas">
-			         	<img class="w-75 rounded border border-secundary border-2" src="../img/miscellaneous/tierra-diatomeas.webp" alt="tierra de diatomeas insecticida">
+			         	<img class=" shopCards" src="../img/miscellaneous/insecticida.webp" alt="insecticida mata cochinilla y pulgon">
+						<img class=" shopCards" src="../img/miscellaneous/tela-antihelada.webp" alt="tela antihelada para plantas">
+			         	<img class=" shopCards" src="../img/miscellaneous/sustrato-plantas.webp" alt="sustrato para cacuts y suculentas">
+			         	<img class=" shopCards" src="../img/miscellaneous/fertilizante.webp" alt="fertilizante liquido">
+			         	<img class=" shopCards" src="../img/miscellaneous/tierra-diatomeas.webp" alt="tierra de diatomeas insecticida">
+						<img class=" shopCards" src="../img/miscellaneous/piedras-blancas.webp" alt="piedras naturales blancas">
+						<img class=" shopCards" src="../img/miscellaneous/piedras-verdes.webp" alt="piedras naturales color verde oscuro">
+						<img class=" shopCards" src="../img/miscellaneous/canto-rodado.webp" alt="canto rodado piedras marrones">
 			         </div>
 			</section>	
-	
-
 		<!--finaliza secciones de productos-->
 		<!--inicia footer-->
 		<svg style="grid-column: 1 / 4;" xmlns="http://www.w3.org/2000/svg" height="300pt" viewBox="0 0 1440 300">

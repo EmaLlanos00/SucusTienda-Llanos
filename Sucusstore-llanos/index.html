@@ -12,11 +12,11 @@
 	<link rel="stylesheet" href="animaciones/animations.css">
 	
 </head>
-<body class="position-relatie">
+<body>
     <!--inicia nav y cartel promocional-->
 		<nav class="navbar navbar-expand-lg nav sticky-top">
 			<div class="container-fluid">
-			  <a class="navbar-brand" href="#"><img src="img/logo p1.png" alt="logo succus store"></a>
+			  <a class="navbar-brand" href="#"><img class="w-100" src="img/logo-ss.webp" alt="logo succus store"></a>
 			  <div>
 			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -35,10 +35,10 @@
 					  Productos
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-					  <li><a class="dropdown-item" href="./pages/productos.html">Suculentas</a></li>
-					  <li><a class="dropdown-item" href="./pages/productos.html">Cactus</a></li>
-					  <li><a class="dropdown-item" href="./pages/productos.html">Macetas</a></li>
-					  <li><a class="dropdown-item" href="./pages/productos.html">Otros</a></li>
+						<li><a class="dropdown-item" href="./pages/productos.html">Cactus</a></li>
+						<li><a class="dropdown-item" href="./pages/productos.html">Suculentas</a></li>
+						<li><a class="dropdown-item" href="./pages/productos.html">Macetas</a></li>
+						<li><a class="dropdown-item" href="./pages/productos.html">Otros</a></li>
 					</ul>
 				  </li>
 				  <li class="nav-item hover-underline-animation">
@@ -102,53 +102,77 @@
 				</button>
 			</div>
 		<!-- inicia galería de productos destacados-->    	
-		<main id="destacados">
+		<main class="mb-4" id="destacados">
 			<div id="indexFotos">
-				<h2 class="itemsTitleStyle" id="h1Fotos">Destacados</h2>
-					<div class="fotoss1">
-						<img src="img/plants/kalanchoe-luciae.webp"  alt="planta kalanchoe luciae"> 
-					</div>
-					<div class="fotoss2">
-						<img src="img/plants/echeveria-lola.webp" alt="planta echeveria lola">
-					</div>
-					<div class="fotoss3">
-						<img src="img/plants/haworthia-truncata.webp" alt="planta haworthia truncata">
-					</div>
-					<div class="fotoss4">
-						<img src="img/plants/senecio-kleiniformis.webp" alt="planta senecio kleiniformis">
-					</div>
-					<div class="fotoss5">
-						<img src="img/plants/pinky-trumpet.webp" alt="echeveria pinky trumpet">
-					</div>
+				<h2 class="itemsTitleStyle rounded-pill" id="h1Fotos">Destacados</h2>
+				<div class="fotoss1">
+					<img src="img/plants/kalanchoe-luciae.webp" alt="planta kalanchoe luciae">
+				</div>
+				<div class="fotoss2">
+					<img src="img/plants/echeveria-lola.webp" alt="planta echeveria lola">
+				</div>
+				<div class="fotoss3">
+					<img src="img/plants/haworthia-truncata.webp" alt="planta haworthia truncata">
+				</div>
+				<div class="fotoss4">
+					<img src="img/plants/senecio-kleiniformis.webp" alt="planta senecio kleiniformis">
+				</div>
+				<div class="fotoss5">
+					<img src="img/plants/pinky-trumpet.webp" alt="echeveria pinky trumpet">
+				</div>
 			</div>
 		</main>
-			<aside id="nuevasMacetas" class="asideStyles">
-				<h3 class="itemsTitleStyle">NUEVAS MACETAS</h3>
-				<article class="bodyPageFont">Llegaron nuevos modelos de macetas a la tienda, adquirilos ya!</article>
-				<div class="flexAsideFotos">
-				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/macetas-facetadas.jfif" alt="macetas facetadas de colores varios">
-				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/maceta-bol-n35.jpg" alt="macetas plásticas grandes tipo bol">
-				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/macetas-barro-cilindro.png" alt="macetas de barro cilíndricas">
-				</div>					
-			</aside>
-			<aside id="nuevasPlantas" class="asideStyles"> 
-				<h3 class="itemsTitleStyle">NUEVAS PLANTAS</h3>
-				<article class="bodyPageFont">No te pierdas los nuevos ingresos premium del sitio</article>	
-				<div class="flexAsideFotos">
-				<img class="w-75 rounded border border-secundary border-2" src="img/plants/echeveria-gorgon-grotto.webp" alt="echeveria grogon grotto planta">
-				<img class="w-75 rounded border border-secundary border-2" src="img/plants/titanopsis-calcarea.webp" alt="titanopsis calcarea planta">
-				<img class="w-75 rounded border border-secundary border-2" src="img/plants/delosperma-lehmannii.png" alt="planta delosperma lehmannii">
-				</div>
-			</aside>
-			
-			
-		<!-- finaliza galería-->
+		<aside id="nuevasMacetas" class="asideStyles">
+			<h3 class="itemsTitleStyle rounded-pill">NUEVAS MACETAS</h3>
+			<div class="h-100 d-flex flex-column flex-wrap align-items-center justify-content-between">
+				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/macetas-facetadas.webp"
+					alt="macetas facetadas de colores varios">
+				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/maceta-ceramica-buho.webp"
+					alt="maceta de ceramica con forma de buho color verde oscuro">
+				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/macetas-barro-cilindro.webp"
+					alt="macetas de barro cilíndricas">
+			</div>
+		</aside>
+		<aside class="objCentred" id="blogCartel">
+			<div class="container-fluid cartelFondo0 objCentred h-75 m-5">
+				<h2 class="cartelCarro">No te olvides de visitar nuestro nuevo blog con consejos e info extra.</h2>
+			</div>
+		</aside>
+		<aside id="piedras" class="asideStyles">
+			<h3 class="itemsTitleStyle rounded-pill">PIEDRITAS</h3>
+			<div class="h-100 d-flex flex-column flex-wrap align-items-center justify-content-between">
+				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/piedras-celestes.webp"
+					alt="piedritas color celeste decoracion">
+				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/canto-rodado.webp"
+					alt="canto rodado piedras marrones">
+				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/piedras-blancas.webp"
+					alt="piedras naturales blancas">
+				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/piedras-verdes.webp"
+					alt="piedras naturales color verde oscuro">
+				<img class="w-75 rounded border border-secundary border-2" src="img/miscellaneous/piedras-onix.webp"
+					alt="piedras tipo onix decorativas">
+			</div>
+		</aside>
+		<section id="nuevasPlantas" class="asideStyles">
+			<h3 class="itemsTitleStyle rounded-pill">NUEVAS PLANTAS</h3>
+			<div class="d-flex flex-row flex-wrap align-items-center justify-content-around">
+				<img class="w-25 rounded border border-secundary border-2 mb-3" src="img/plants/echeveria-gorgon-grotto.webp"
+					alt="echeveria grogon grotto planta">
+				<img class="w-25 rounded border border-secundary border-2 mb-3" src="img/plants/titanopsis-calcarea.webp"
+					alt="titanopsis calcarea planta">
+				<img class="w-25 rounded border border-secundary border-2 mb-3" src="img/plants/delosperma-lehmannii.webp"
+					alt="planta delosperma lehmannii">
+				<img class="w-25 rounded border border-secundary border-2 mb-3" src="img/plants/cerebritos.webp"
+					alt="cactus cerebro cerebrito crestado">
+			</div>
+		</section>
+		<!-- finaliza galería destacados-->
 		<!--inicia formulario-->
 		<section class="text-center bodyPageFont contactFormStyle objCentred container-fluid" id="contacto">
 			<article class="w-100">
 				<form action="envio.php" method="post" id=formulario>
 						<fieldset>
-								<legend class="textCenter itemsTitleStyle">Contactanos!</legend>
+								<legend class="itemsTitleStyle rounded-pill">Contactanos!</legend>
 								<div class="form-floating mb-3">
 									<input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
 									<label for="email">Correo</label>

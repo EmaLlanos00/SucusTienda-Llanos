@@ -3,6 +3,14 @@
 $fuenteUno: 'Zen Maru Gothic', sans-serif;
 $fuenteDos: 'Montserrat', sans-serif;
 $fuenteTres:  'Nunito', sans-serif;
+//-------------mixins
+@mixin flex($flex-direction, $wrap, $align-items, $justify-content){
+    display: flex;
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
 
 //-------------------mapa de colores
 $colors: (

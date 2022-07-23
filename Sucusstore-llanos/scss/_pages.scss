@@ -6,26 +6,12 @@
 	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
-	.cartelFondo{
-		width: auto;
-		height: 50vh;
-		background-image: url(../img/plants/cactus-1.webp);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		.cartelCarro{
-			@extend .itemsTitleStyle;
-			background-color: rgba(202, 202, 202, 0.4) !important;
-			width: 50% !important;
-			height: auto;
-			padding: 2rem;
-			border-radius: 0.5em;
-			color: map-get($map: $colors, $key: color9);
-			@media (max-width: 1000px) {
-				width: 80% !important;
-			}
-	
-		}
+}
+.cartelFondo1{
+	@extend .cartelFondo0;
+	background-image: url(../img/plants/plantas4.webp);
+	.cartelCarro{
+		width: 50% !important;
 	}
 }
 /*estilos de BLOG*/
@@ -60,7 +46,7 @@
 .longCards1{
 	width: 100%;
 	height: auto;
-	@media (min-width: 768px){
+	@media (min-width: 1200px){
 	.col-md-4 {
     flex: 0 0 auto;
     width: 20%;

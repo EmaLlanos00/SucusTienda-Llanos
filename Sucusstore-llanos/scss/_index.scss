@@ -2,9 +2,9 @@
 #bodyIndex {
     display: grid;
     overflow-x: hidden;
-    grid-template-areas: "sign 		sign 		sign" "header 	header 		header" "macetas 	destacados 	plantas" "macetas 	contact 	plantas";
+    grid-template-areas: "sign 		sign 		sign" "header 	header 		header" "macetas 	destacados 	piedras" "macetas 	plantas 	piedras" "cartel 	contact 	piedras";
     min-height: 100vh;
-    grid-template-rows: auto 0.5fr 1fr 1fr;
+    grid-template-rows: auto 0.5fr 1fr 0.5fr 0.5fr;
     grid-template-columns: 1fr 3fr 1fr;
   }
   
@@ -35,7 +35,7 @@
     grid-area: destacados;
     #indexFotos{
       display: grid;
-      grid-template-areas: "h1Fotos h1Fotos h1Fotos" "foto1  foto2 foto3" "foto4 foto5 foto5";
+      grid-template-areas: "h1Fotos h1Fotos h1Fotos" "foto1 foto2 foto3" "foto4 foto5 foto5";
       margin-top: 0.5rem;
       gap: 0.5rem;
       grid-template-rows: auto auto auto;
@@ -77,8 +77,14 @@
       }
   }
   
-  #nuevasPlantas {
+  #piedras {
+    grid-area: piedras;
+  }
+  #nuevasPlantas{
     grid-area: plantas;
+  }
+  #blogCartel{
+    grid-area: cartel;
   }
   
   #nuevasMacetas {
@@ -100,9 +106,9 @@
   /*medium size*/
   @media (max-width: 1200px) {
     #bodyIndex {
-      grid-template-areas: "sign sign" "header header" "destacados destacados" "plantas macetas" "contact contact";
+      grid-template-areas: "sign sign" "header header" "destacados destacados" "plantas plantas" "macetas piedras" "cartel piedras" "contact contact";
       min-height: 100vh;
-      grid-template-rows: auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto 0.5fr 1fr auto;
       grid-template-columns: 50vw 50vw;
     }
   
@@ -133,31 +139,56 @@
         
       }
     }
+    #nuevasPlantas{
+      img{
+        width: 40% !important;
+      }
+    }
   }
   /*small size*/
-  @media (max-width: 600px) {
-    #bodyIndex {
-      grid-template-areas: "sign " "header" "destacados" "plantas" "macetas" "contact";
-      min-height: 100vh;
-      grid-template-rows: 45px auto 0.5fr auto auto auto;
-      grid-template-columns: 100vw;
+    @media (max-width: 600px) {
+      #bodyIndex {
+        grid-template-areas: "sign ""header""destacados""plantas""piedras""macetas""contact";
+        min-height: 100vh;
+        grid-template-rows: 45px auto 0.5fr auto auto auto auto;
+        grid-template-columns: 100vw;
+      }
+  
+      #destacados {
+        border: 1px solid gray;
+        border-radius: 3px;
+        margin: 1rem;
+        font-size: 2rem;
+  
+        #indexFotos {
+  
+          grid-template-areas: "h1Fotos""foto1""foto2""foto5""foto3""foto4";
+          grid-template-rows: auto auto auto auto auto auto;
+          grid-template-columns: 1fr;
+          gap: unset;
+          row-gap: 1rem;
+        }
+      }
+    #nuevasPlantas {
+      img {
+        width: 80% !important;
+      }
     }
   
-        #destacados {
-          border: 1px solid gray;
-          border-radius: 3px;
-          margin: 1rem;
-          font-size: 2rem;
-    
-          #indexFotos {
-    
-            grid-template-areas: "h1Fotos" "foto1" "foto2" "foto5" "foto3" "foto4";
-            grid-template-rows: auto auto auto auto auto auto;
-            grid-template-columns: 1fr;
-            gap: unset;
-            row-gap: 1rem;
-          }
+    #piedras {
+      div {
+        width: 95%;
+        img {
+          width: 80% !important;
+          height: 22rem;
+          object-fit: cover;
         }
+      }
+    }
+  
+    #blogCartel {
+      display: none;
+    }
   
     #contacto {
       padding: 0;
@@ -166,7 +197,6 @@
       background-color: white;
       margin: 1rem;
     }
-    
-  }
+    }
 
   
