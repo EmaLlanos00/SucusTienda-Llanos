@@ -1,5 +1,8 @@
 # Proyecto Sucusstore
 ###### [novedades](#new)
+###### [github pages](https://emallanos00.github.io/SucusTienda-Llanos/Sucusstore-llanos/index.html)
+###### [netlify](https://gentle-dusk-129181.netlify.app/)
+###### [000webhost](https://ellanos.000webhostapp.com/)
 ##Introducción
 El proyecto consiste en un sitio de ventas online de jardinería. Conformado por 5 páginas: index, blog, productos, cuenta, carrito. Cada página tiene su función y comparten el mejor intento de estética minimalista/simple que mi pobre conocimiento en diseño puede ofrecer.
 
@@ -33,3 +36,4 @@ Me gustaría incorporar *javascript* en este sitio para llevar la simulación de
 
 - Agregado este readme (me encantó hacerlo, debí haberlo hecho antes).
 - Revisón de todos los `alt="..."` de `img`
+- Agregados links, trabajo subido al servidor con page404
